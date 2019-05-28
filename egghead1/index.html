@@ -13,7 +13,14 @@ const rootElement = document.getElementById('root')
         children: 'Hello World',
     }) */
     const content = 'Hello World'
-    content myClassName = 'container'
-    const element = <div className={myClassName}>{(() => content)()}</div>
+    const myClassName = 'container'
+    const props = {
+        className: 'container',
+        children: 'Hello World',
+    }
+    const element = 
+        <div {...props} />
+
+
 ReactDOM.render(element,rootElement)
 </script>
