@@ -28,7 +28,7 @@ class UserCompany extends React.Component {
                     }
                 }`,
             },
-            headers: {Authorization: `bearer INSERTPERSONALTOKEN `}, //token must have read:user scope
+            headers: {Authorization: `bearer 5160f0c17bde8ccb70a2f489123e06fd4925d035 `}, //token must have read:user scope
         }).then(response => {
             this.setState({
                 company: response.data.user.company,
