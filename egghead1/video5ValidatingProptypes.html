@@ -1,0 +1,34 @@
+<body>
+<script src="https://unpkg.com/react@16.0.0/umd/react.production.min.js" crossorigin></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+<script type = "text/babel">
+function SayHello(props) {
+    return (
+        <div>
+            Hello {props.firstName} {props.lastName}!
+        </div>
+    )
+}
+
+const PropTypes = {
+    string(props, propName, componentName) {
+        if(typeof props[propName] !== 'string') {
+            return new Error(
+                `Hey you should pass a string for ${propName} 
+                in ${componentName} but you passed a ${typeof props[propName]}!`
+    )
+   }
+ },
+}
+
+SayHello.proptypes = {
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+}
+ReactDOM.render(
+    <SayHello firstName = {true} />,
+    document.getElementById('root')
+)
+</script>
+</body>
