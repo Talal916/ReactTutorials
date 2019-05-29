@@ -9,7 +9,7 @@ const rootElement = document.getElementById('root')
 
 function tick(){
 const time = new Date().toLocaleTimeString()
-const element = <div>It is {time}</div>
+const element = <div>It is <input value = {time} /> </div>
 ReactDOM.render(element,rootElement)
 }
 tick()
